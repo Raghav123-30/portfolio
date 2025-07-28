@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 export default function Introduction() {
   return (
@@ -12,20 +13,14 @@ export default function Introduction() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <div className="w-48 h-48 md:w-64 md:h-64 bg-gray-200 rounded-full flex items-center justify-center shadow-inner">
-            <svg
-              className="w-24 h-24 text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a8.25 8.25 0 1115 0"
-              />
-            </svg>
+          <div className="flex-1 relative">
+            <Image
+              src={"/profile.jpg"}
+              alt="profile"
+              height={400}
+              width={400}
+              className="rounded-xl shadow-md hover:shadow-xl cursor-pointer"
+            />
           </div>
         </motion.div>
 
@@ -58,10 +53,6 @@ export default function Introduction() {
             agentic systems, Retrieval-Augmented Generation (RAG), and the Model
             Context Protocol (MCP) to better understand how we can build
             smarter, more adaptive applications.`}
-          </p>
-
-          <p className="bg-blue-700 p-6 rounded-full text-white w-fit">
-            Site is under construction 🚧
           </p>
 
           <motion.div
